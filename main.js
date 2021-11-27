@@ -19,17 +19,25 @@ function show()
 	console.log(names_of_people);
 	document.getElementById("p1").innerHTML=i.toString();
 	document.getElementById("sort_button").style.display="block";
-	
+    document.getElementById("show").style.display = "none";
+	document.getElementById("hide").style.display = "inline-block";
+    document.getElementById("p1").style.display = "inline-block";
 }
 
+function hide()
+{
+	document.getElementById("p1").style.display = "none";
+    document.getElementById("show").style.display = "inline-block";
+	document.getElementById("hide").style.display = "none";
+}
 
-function sorting()
-	{
-		names_of_people.sort();
-		var i= names_of_people.join("<br>");
-		console.log(names_of_people);		
-		document.getElementById("sorted").innerHTML=i.toString();
-		}
+function sorting() {
+	names_of_people.sort();
+	var i= names_of_people.join("<br>");
+	console.log(names_of_people);		
+	document.getElementById("sorted").innerHTML=i.toString();
+}
+
 
 
 function searching()
